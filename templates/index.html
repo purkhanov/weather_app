@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="content">
+        <h1 id="title" class="title"></h1>
+
+        <div class="search">
+          <i class="ri-search-line"></i>
+          <div>
+            <input id="search" type="search">
+            <i id="history" class="ri-history-line"></i>
+          </div>
+
+          <div id="search-guess" class="search-guess"></div>
+        </div>
+
+
+        <div class="wether">
+          <div class="info-title">
+            <div>
+              <div id="city-name" class="city-name">{{ data.location.name }}</div>
+              <div id="country" class="country-name">{{ data.location.country }}</div>
+            </div>
+            <div id="time" class="time">{{ localtime }}</div>
+          </div>
+
+          <div class="weather-info">
+            <img id="img-icon" src="{{ data.current.condition.icon }}" alt="Icon">
+            <div>
+              <div id="temp" class="temp">{{ data.current.temp_c }}</div>
+              <i class="ri-celsius-line"></i>
+            </div>
+            <div id="condition">{{ data.current.condition.text }}</div>
+          </div>
+
+          <div class="br"></div>
+
+          <div id="forecastdays" class="wetaher-days">
+            {% for day in data.forecast.forecastday %}
+              <div>
+                <div class="item">
+                  <div class="day">{{day.date}}</div>
+                  <div class="day-icon">
+                    <img id="img-icon" src="{{day.day.condition.icon}}" alt="Icon">
+                  </div>
+                  <div class="day-temp">{{ day.day.maxtemp_c }}<span>°</span></div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </div>    
+  </main>
+
+  <div id="modal" class="modal"></div>
+  
+  <script src="../static/main.js"></script>
+</body>
+</html>

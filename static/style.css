@@ -1,0 +1,234 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1f4f5;
+  padding: unset;
+  margin: unset;
+}
+
+main {
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 400px;
+  margin: 30px auto 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.search {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search > div {
+  display: flex;
+  align-items: center;
+}
+
+.search > div i {
+  margin-left: 10px;
+  color: #1e35b7;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.search > div i:hover {
+  color: #3f52bd;
+  background-color: #ced1ce;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.search input {
+  width: 100%;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  padding: 8px 8px 8px 35px;
+  box-shadow: 0px 3px 6px #e0d8d8;
+  font-size: 16px;
+}
+
+.search > i {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #483cd4;
+}
+
+.search input:focus {
+  border: 1px solid #bebaba;
+  outline: none;
+}
+
+.search-guess {
+  display: none;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: start;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  max-height: 200px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.guess-item {
+  padding: 5px 5px 5px 20px;
+  border-bottom: 1px solid #f3efef;
+}
+
+.guess-item:hover {
+  background-color: #eee7e7;
+  cursor: pointer;
+}
+
+.guess-item span {
+  color: #444141;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.wether {
+  position: relative;
+  background-image: linear-gradient(235deg,#0f1b60, #3e55d7);
+  border-radius: 5px;
+  box-shadow: 0 0 6px #c4bcbc;
+  padding: 15px;
+  color: white;
+}
+
+.info-title {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 25px;
+}
+
+.weather-info {
+  text-align: center;
+}
+
+.country-name {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.weather-info div {
+  position: relative;
+}
+
+.weather-info .temp {
+  position: relative;
+  font-size: 50px;
+}
+
+.weather-info div i {
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  font-size: 25px;
+}
+
+.br {
+  margin: 20px auto;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(to right, #142377, white, #142377);
+}
+
+.wetaher-days .item {
+  display: flex;
+  justify-content: space-around;
+  margin: 8px 0;
+}
+
+.wetaher-days .day-icon img {
+  width: 35px;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #17161684;
+  z-index: 15;
+  display: none;
+}
+
+.modal-content {
+  max-width: 300px;
+  margin: 100px auto 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: white;
+  text-align: center;
+}
+
+.modal-content .title {
+  font-size: 14px;
+}
+
+.modal-content button {
+  border: unset;
+  border-radius: 5px;
+  padding: 4px 18px;
+}
+
+.modal-content button:hover {
+  cursor: pointer;
+}
+
+#yes {
+  background-color: #0aa023;
+  color: white;
+  margin-right: 10px;
+}
+
+#cancel {
+  background-color: #ec4040;
+  color: white;
+  margin-left: 10px;
+}
+
+#yes:hover {
+  background-color: #0b851f;
+}
+
+#cancel:hover {
+  background-color: #c23030;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 2px 10px 2px 10px;
+}
+
+.history-item:hover {
+  background-color: #d8d4d4;
+}
+
+.history-item > div {
+  text-align: start;
+}
